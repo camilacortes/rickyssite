@@ -1,0 +1,99 @@
+body{
+    /* margin: 119px; */
+    font-family: 'Handjet', sans-serif;
+    display:grid;
+    place-content:center;
+}
+
+
+  img{
+      height: 246px;
+    mask:
+    radial-gradient(at 70% 31%,#000 29%,#0000 30%),
+    radial-gradient(at 30% 31%,#000 29%,#0000 30%),
+    linear-gradient(#000 0 0) bottom/100% 50% no-repeat;
+    clip-path: polygon(-41% 0,50% 91%, 141% 0);
+  }
+
+   
+  .main-image{
+      text-align: center;
+      margin-top: 35px;
+    }
+
+  h1{
+    font-size: 59px;    
+    margin: 0px;
+    text-align: center;
+    }
+
+
+
+
+.loader {
+    /* the colors */
+    --c1: #d686ce;
+    --c2: #d33db5;
+    --c3: #b9608e;
+    --c4: #932a2a;
+    /**/
+    float:right;
+    margin: 15px;
+    width: 55px; /* control the size */
+    aspect-ratio: 8/5;
+    --_g: no-repeat radial-gradient(#000 68%,#0000 71%);
+    -webkit-mask: var(--_g),var(--_g),var(--_g);
+    -webkit-mask-size: 25% 40%;
+    background: 
+      conic-gradient(var(--c1) 50%,var(--c2) 0) no-repeat,
+      conic-gradient(var(--c3) 50%,var(--c4) 0) no-repeat;
+    background-size: 200% 50%;
+    animation: 
+      back 4s infinite steps(1),
+      load 2s infinite;
+  }
+  
+  @keyframes load {
+    0%    {-webkit-mask-position: 0% 0%  ,50% 0%  ,100% 0%  }
+    16.67%{-webkit-mask-position: 0% 100%,50% 0%  ,100% 0%  }
+    33.33%{-webkit-mask-position: 0% 100%,50% 100%,100% 0%  }
+    50%   {-webkit-mask-position: 0% 100%,50% 100%,100% 100%}
+    66.67%{-webkit-mask-position: 0% 0%  ,50% 100%,100% 100%}
+    83.33%{-webkit-mask-position: 0% 0%  ,50% 0%  ,100% 100%}
+    100%  {-webkit-mask-position: 0% 0%  ,50% 0%  ,100% 0%  }
+  }
+  @keyframes back {
+    0%,
+    100%{background-position: 0%   0%,0%   100%}
+    25% {background-position: 100% 0%,0%   100%}
+    50% {background-position: 100% 0%,100% 100%}
+    75% {background-position: 0%   0%,100% 100%}
+  }
+  
+  .buttons{
+    position: block;
+    text-align: center;
+  }
+  
+  button{
+    height: 50px;
+    margin: 10px;
+    width: 100px;
+    border-radius: 10%;
+    background-color: #f2abea;
+  }
+
+  button:hover{
+    background-color: white;
+  }
+  
+p{
+  font-size: 20px;
+  margin: 30px;
+}
+
+
+.pcolor{
+  color: red;
+}
+
